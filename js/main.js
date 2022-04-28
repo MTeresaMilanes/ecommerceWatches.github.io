@@ -90,7 +90,7 @@ class UI {
           <div class="bottom">
             <div class="btn__group">
               <button class="btn addToCart" data-id=${producto.id}>Añadir carrito</button>
-              <a href="product-details.html?id=${producto.id}" class="btn view">Vista</a>
+              <a href="./product-details.html?id=${producto.id}" class="btn view">Vista</a>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ class UI {
 		</div>
 		<div>
 			<span class="remove__item" data-id=${id}>
-				<i class="bx bx-trash"></i>
+        <span class="iconify" data-icon="bxs:trash-alt"></span>
 			</span>
 		</div>
 		`
@@ -252,13 +252,13 @@ class UI {
 
 class Storage {
   static saveProduct (obj) {
-    localStorage.setItem('productos', JSON.stringify(obj))
+    localStorage.setItem('product', JSON.stringify(obj))
   }
   static saveCart (carrito) {
     localStorage.setItem('carrito', JSON.stringify(carrito))
   }
   static getProductos (id) {
-    const producto = JSON.parse(localStorage.getItem('productos'))
+    const producto = JSON.parse(localStorage.getItem('product'))
     return producto.find(product => product.id === parseFloat(id, 10))
   }
   static getCart () {

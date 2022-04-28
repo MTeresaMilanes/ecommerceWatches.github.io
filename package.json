@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "homepage": "https://mteresamilanes.github.io/ecommerceWatches.github.io/",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
