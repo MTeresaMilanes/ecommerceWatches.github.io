@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="./style/styleForm.css" />
+  <link rel="stylesheet" href="./style/styleAdd-product.css" />
+  <link rel="stylesheet" href="./style/styleApp.css" />
+  <link rel="stylesheet" href="./style/StyleCart.css" />
+  <link rel="stylesheet" href="./style/stylePlaceOrder.css" />
+  <title>Online store: Place Order</title>
+</head>
+<body>
+  <nav class="navbar dark"></nav>
+
+  <div class="cart-section">
+    <div class="product-list">
+      <p class="section-heading">your cart</p>
+      <div class="cart-container">
+    </div>
+  </div>
+  <div class="form">
+    <h1 class="heading">payment</h1>
+    <div class="icon-cards">
+      <p class="text">Credit / Debit</p>
+      <span class="iconify" data-icon="logos:mastercard"></span>
+      <span class="iconify" data-icon="logos:visaelectron"></span>
+    </div>
+    
+    <input type="text" id="nameOnCard" placeholder="Name on Card">
+    <input type="number" id="cardNumber" placeholder="Card Number">
+    <div class="two-input-container">
+      <input type="number" id="dateCard" placeholder="MM / YY">
+      <input type="number" id="cvv" placeholder="CVV">
+      </div>
+    <button class="payment-order-btn">Payment</button>
+  </div>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/home.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/place-order.js"></script>
+</body>
+</html>
