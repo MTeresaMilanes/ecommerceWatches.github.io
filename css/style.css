@@ -6,6 +6,7 @@
   --azul: #0751a6;
   --amarillo: #d5be8b;
   --rojo: #e71247;
+  --verde: #13b32b;
 }
 *,
 *::before,
@@ -84,7 +85,7 @@ li{
 }
 .nav__logo .iconify{
   color: var(--amarillo);
-  font-size: 3.5rem;
+  font-size: 5.5rem;
 }
 .nav__list{
   display: flex;
@@ -179,10 +180,19 @@ li{
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
-.btn:hover{
-  background-color: var(--azul);
+
+.btn__group .addToCart{
+  background: var(--azul);
   color: var(--white);
-  border: 1px solid var(--azul);
+}
+
+.btn__group .addToCart:hover{
+  border: 1px solid var(--verde);
+}
+.btn:hover{
+  background-color: var(--rojo);
+  color: var(--white);
+  border: 1px solid var(--rojo);
 }
 .price{
   font-weight: 700;
@@ -284,6 +294,11 @@ li{
   background-color: rgb(238, 121, 121);
   border: none;
   margin-top: 2rem;
+  color: var(--white);
+}
+.carrito__footer .place__order{
+  background: var(--verde);
+  color: var(--white);
 }
 .carrito__footer .btn:focus{
   outline: none;

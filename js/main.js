@@ -48,7 +48,7 @@ class UI {
 						</p>
 						<div class="bottom">
 							<div class="btn__group">
-								<button class="btn addToCart" data-id=${producto.id}>Añadir carrito</button>
+								<button class="btn addToCart" data-id=${producto.id}>Add Your Cart</button>
 							</div>
 						</div>
 				</div>
@@ -89,8 +89,8 @@ class UI {
           </div>
           <div class="bottom">
             <div class="btn__group">
-              <button class="btn addToCart" data-id=${producto.id}>Añadir carrito</button>
-              <a href="./product-details.html?id=${producto.id}" class="btn view">Vista</a>
+              <button class="btn addToCart" data-id=${producto.id}>Add Your Cart</button>
+              <a href="./product-details.html?id=${producto.id}" class="btn view">View Details</a>
             </div>
           </div>
         </div>
@@ -107,13 +107,15 @@ class UI {
       const inCart = carrito.find(item => item.id === parseInt(id, 10))
 
       if (inCart) {
-        button.innerHTML = 'En el carrito'
+        button.innerHTML = 'Added Your Cart'
         button.disabled = true
+        button.style.background = '#13b32b'
       }
       button.addEventListener('click', e => {
         e.preventDefault()
-        e.target.innerHTML = 'En el carrito'
+        e.target.innerHTML = 'Added Your Cart'
         e.target.disabled = true
+        button.style.background = '#13b32b'
 
         // GET productos al carrito
         const carritoItem = { ...Storage.getProductos(id), cantidad: 1 }
@@ -242,7 +244,7 @@ class UI {
     let button = this.singleButton(id)
     if (button) {
       button.disabled = false
-      button.innerText = 'Añadir carrito'
+      button.innerText = 'add cart'
     }
   }
   singleButton (id) {
@@ -320,6 +322,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     ui.cartLogic()
   }
 })
+
+let buttonFooter = document.querySelector('.fButton');
+buttonFooter.addEventListener('click', () => {
+  alert('successful subscription');
+})
+
 // image collage
 
 const collageImages = [...document.querySelectorAll('.collage-img')]
@@ -354,14 +362,26 @@ const showFormError = (err) => {
 let applyBtn = document.querySelector('.apply-btn');
 
 applyBtn.addEventListener('click', () => {
-  let businessName = document.querySelector('#name').value;
-  let address = document.querySelector('#email').value;
-  let about = document.querySelector('#message').value;
-  let number = document.querySelector('#number').value;
+  let customerName = document.querySelector('#name').value;
+  let customerEmail = document.querySelector('#email').value;
+  let customerMessage = document.querySelector('#message').value;
+  let customerNumber = document.querySelector('#number').value;
+  let expRegEmail= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  let isValidEmail = expRegEmail.test(customerEmail);
 
-  if(!businessName.length || !address.length || !about.length || number.length < 10 || !Number(number)){
+  if(!customerName.length || !customerEmail.length || !isValidEmail || !customerMessage || customerNumber.length < 10 || !Number(customerNumber)){
+    if(!isValidEmail) {
+      showFormError('email is not valid');
+      console.log(customerEmail);
+      console.log(isValidEmail);
+    }else{
       showFormError('some information(s) is/are incorrect');
-  } else{
-     alert('Form was successfully submitted')
+      console.log(isValidEmail);
+    }
+  }else{
+    alert('Form was successfully submitted')
   }
 })
+
+
+
