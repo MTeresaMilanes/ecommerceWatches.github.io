@@ -209,7 +209,7 @@ li{
   height: 100%;
   transition: all 300ms ease-in-out;
   background-color: rgba(0, 0, 0, .7);
-   visibility: hidden;
+  visibility: hidden;
   z-index: 2;
 }
 .carrito{
@@ -303,10 +303,121 @@ li{
 .carrito__footer .btn:focus{
   outline: none;
 }
+
+/* checkout */
+.payment__overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in-out;
+  background-color: rgba(0, 0, 0, .7);
+  visibility: hidden;
+  z-index: 2;
+}
+.payment{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.5);
+  width: 60%;
+  height: 80%;
+  padding: 1.6rem;
+  border-radius: 2rem;
+  overflow-x: scroll;
+  background-color: #f2f2f2;
+  opacity: 0; 
+  visibility: hidden; 
+  transform: all 300ms ease-in-out;
+}
+.payment.show{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.payment__overlay.show{
+  visibility: visible;
+}
+.payment .close__payment .iconify{
+  font-size: 4.5rem;
+  cursor: pointer;
+  color: var(--black);
+  transform: all 300ms ease-in-out;
+}
+.payment .close__payment:hover{
+  color: var(--rojo);
+}
+.payment__item span{
+  font-size: 2rem;
+  color: rgb(88, 86, 86);
+}
+.payment h1{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.payment__item{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  width: 70%;
+  margin: 2rem auto;
+}
+.payment__item div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.payment__item div span{
+  cursor: pointer;
+}
+.payment__item img{
+  width: 9rem;
+}
+.payment__iem h3{
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.payment__item .price{
+  color: var(--azul);
+  font-weight: 700;
+}
+.payment__item .remove__item{
+  cursor: pointer;
+  color: var(--rojo);
+  font-size: 4rem;
+}
+.payment__footer{
+  text-align: center;
+  margin: 3rem;
+}
+.payment__footer .btn{
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  background-color: rgb(238, 121, 121);
+  border: none;
+  margin-top: 2rem;
+  color: var(--white);
+}
+.payment__footer .place__order{
+  background: var(--verde);
+  color: var(--white);
+}
+.payment__footer .btn:focus{
+  outline: none;
+}
+.two-input-container{
+  display: flex;
+  gap: 20px;
+}
 @media only screen and (max-width: 1350px){
   .carrito__item{
       width: 100%;
   }
+  .payment__item{
+    width: 100%;
+}
 }
 @media only screen and (max-width: 700px){
   .carrito{
@@ -321,6 +432,15 @@ li{
   .btn{
       padding: .8rem 1.5rem;
       font-size: 1.6rem;
+  }
+  .payment{
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
+}
+  .payment__item h3{
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
   }
 }
 

@@ -8,6 +8,9 @@ const carritoTotal = document.querySelector('.carrito__total')
 const clearCarritoBtn = document.querySelector('.clear__carrito')
 const itemTotales = document.querySelector('.item__total')
 const detalles = document.getElementById('detalles')
+let paymentBtn = document.querySelector('.payment-order-btn');
+let buttonFooter = document.querySelector('.fButton');
+
 
 let carrito = []
 let buttonDOM = []
@@ -174,10 +177,12 @@ class UI {
   }
   show () {
     carritoDOM.classList.add('show')
+    // paymentDOM.classList.add('show')
     overlay.classList.add('show')
   }
   hide () {
     carritoDOM.classList.remove('show')
+    // paymentDOM.classList.remove('show')
     overlay.classList.remove('show')
   }
   setAPP () {
@@ -186,6 +191,8 @@ class UI {
     this.populate(carrito)
     openCarrito.addEventListener('click', this.show)
     closeCarrito.addEventListener('click', this.hide)
+    // openPayment.addEventListener('click', this.show)
+    // closePayment.addEventListener('click', this.hide)
   }
   populate (carrito) {
     carrito.forEach(item => this.addCarritoItem(item))
@@ -323,7 +330,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 })
 
-let buttonFooter = document.querySelector('.fButton');
+
+paymentBtn.addEventListener('click', () => {
+  console.log('payment')
+  alert('Successful payment');
+})
+
 buttonFooter.addEventListener('click', () => {
   alert('successful subscription');
 })
@@ -382,6 +394,7 @@ applyBtn.addEventListener('click', () => {
     alert('Form was successfully submitted')
   }
 })
+
 
 
 
