@@ -24,19 +24,19 @@ class UI {
 					<h3>${producto.title}</h3>
 					<div class="rating">
 						<span>
-							<i class="bx bxs-star"></i>
+              <span class="iconify" data-icon="bi:star-fill"></span>
 						</span>
 						<span>
-							<i class="bx bxs-star"></i>
+              <span class="iconify" data-icon="bi:star-fill"></span>
 						</span>
 						<span>
-							<i class="bx bxs-star"></i>
+              <span class="iconify" data-icon="bi:star-fill"></span>
 						</span>
 						<span>
-							<i class="bx bxs-star"></i>
+              <span class="iconify" data-icon="bi:star-fill"></span>
 						</span>
 						<span>
-							<i class="bx bx-star"></i>
+              <span class="iconify" data-icon="carbon:star"></span>
 						</span>
 					</div>
 						<p class="price"><b>Precio: </b> $${producto.price}</p>
@@ -155,11 +155,11 @@ class UI {
 		</div>
 		<div>
 			<span class="increase" data-id=${id}>
-				<i class="bx bxs-up-arrow"></i>
+        <span class="iconify" data-icon="akar-icons:arrow-up"></span>
 			</span>
 			<p class="item__cantidad">1</p>
 			<span class="decrease" data-id=${id}>
-				<i class="bx bxs-down-arrow"></i>
+        <span class="iconify" data-icon="akar-icons:arrow-down"></span>
 			</span>
 		</div>
 		<div>
@@ -339,4 +339,29 @@ collageImages.map((item, i) => {
       image.style = null
     })
   })
+})
+
+const showFormError = (err) => {
+  let errorEle = document.querySelector('.error');
+  errorEle.innerHTML = err;
+  errorEle.classList.add('show')
+
+  setTimeout(() => {
+      errorEle.classList.remove('show')
+  }, 2000)
+}
+
+let applyBtn = document.querySelector('.apply-btn');
+
+applyBtn.addEventListener('click', () => {
+  let businessName = document.querySelector('#name').value;
+  let address = document.querySelector('#email').value;
+  let about = document.querySelector('#message').value;
+  let number = document.querySelector('#number').value;
+
+  if(!businessName.length || !address.length || !about.length || number.length < 10 || !Number(number)){
+      showFormError('some information(s) is/are incorrect');
+  } else{
+     alert('Form was successfully submitted')
+  }
 })

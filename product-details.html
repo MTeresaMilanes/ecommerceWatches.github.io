@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JSON DEV - Productos detalles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap"rel="stylesheet"/>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/styleApp.css"/>
+
+    <title>Online Store - Product Details Page</title>
     <!--Box icons-->
     <link
       rel="stylesheet"
@@ -18,15 +25,18 @@
       <div class="nav__center container">
         <a href="./index.html">
           <div class="nav__logo">
-            <h1>JSON <span>DEV</span></h1>
+            <span class="iconify" data-icon="arcticons:activitywatch"></span>
           </div>
         </a>
+        <ul class="links-container">
+          <li class="link-item"><a href="./index.html" class="link active">home</a></li>
+          <li class="link-item"><a href="./product-list.html" class="link">products</a></li>
+          <li class="link-item"><a href="./contact.html" class="link">contact</a></li>
+        </ul>
         <ul class="nav__list">
-          <span>
-            <i class="bx bxs-watch"></i>
-          </span>
+          <span class="iconify" data-icon="carbon:user-avatar-filled-alt"></span>
           <div class="carrito__icon">
-            <i class="bx bx-cart"></i>
+            <span class="iconify" data-icon="dashicons:cart"></span>
             <span class="item__total">0</span>
           </div>
         </ul>
