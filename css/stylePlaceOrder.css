@@ -5,46 +5,63 @@ body{
   background: #fff;
   font-family: 'lato', sans-serif;
 }
+
+.seller-img{
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
 .two-input-container{
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .payment-order-btn{
-  display: block;
-  width: 100%;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  height: 40px;
-  border-radius: 5px;
-  background: #1d1d1d;
-  color: #fff;
-  text-align: center;
-  line-height: 40px;
+  width: 250px;
+  padding: 10px 0;
+  font-size: 1.5rem;
   text-transform: capitalize;
+  background-color: #d5be8b;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: 'cinzel'; 
+}
+.payment-order-btn-2{
+  width: 250px;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  background-color: #70130e;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: 'cinzel'; 
+}
+.payment-order-btn-2 a {
   text-decoration: none;
+  color: #fff;
 }
-
-.icon-cards .iconify{
-  display: inline;
-}
-
 .form{
-  width: 60%;
-  padding: 20px 40px;
+  width: 50%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.form-heading{
-  font-size: 30px;
-  margin-bottom: 20px;
+.form-title{
+  font-size: 3rem;
+  color: #d5be8b;
+  text-transform: capitalize;
+  margin-bottom: 30px;
 }
 
-input, textarea{
-  width: 100%;
+input{
+  width: 95%;
   height: 40px;
   border: 1px solid #b9b9b9;
   margin: 5px 0;
@@ -53,7 +70,7 @@ input, textarea{
   font-family: 'lato', sans-serif;
   color: #000;
   outline: none;
-  border-radius: 5pyx;
+  border-radius: 5px;
 }
 
 ::placeholder{
@@ -66,11 +83,19 @@ input::-webkit-inner-spin-button{
   margin: 0;
 }
 
-input:focus, textarea:focus{
+input:focus{
   border: 2px solid #d5be8b;
 }
 
-input:focus::placeholder, textarea:focus::placeholder{
+input:focus::placeholder{
   color: #d5be8b;
 }
 
+.form .text{
+  text-align: right;
+}
+.icon-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

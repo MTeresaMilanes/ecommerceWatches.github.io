@@ -299,7 +299,10 @@ footer{
   justify-content: space-between;
   text-align:left;
 }
-
+.copyright a{
+  text-decoration: none;
+  color: gray;
+}
 
 .fButton {
   padding: 5px;

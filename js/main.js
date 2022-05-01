@@ -8,8 +8,9 @@ const carritoTotal = document.querySelector('.carrito__total')
 const clearCarritoBtn = document.querySelector('.clear__carrito')
 const itemTotales = document.querySelector('.item__total')
 const detalles = document.getElementById('detalles')
-let paymentBtn = document.querySelector('.payment-order-btn');
 let buttonFooter = document.querySelector('.fButton');
+
+
 
 
 let carrito = []
@@ -331,14 +332,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 
 
-paymentBtn.addEventListener('click', () => {
-  console.log('payment')
-  alert('Successful payment');
-})
-
-buttonFooter.addEventListener('click', () => {
-  alert('successful subscription');
-})
 
 // image collage
 
