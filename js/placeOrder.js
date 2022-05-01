@@ -50,16 +50,11 @@ function validate_cvv(cvv){
      }
 
   }
-  
+
   let paymentBtn = document.querySelector('.payment-order-btn');
 
   paymentBtn.addEventListener('click', () => {
-    // creditCard.replace(/(\d{4}(?!\s))/g, "$1 ");
-    // console.log(creditCard)
     console.log('payment')
     alert('Successful payment');
   })
   
-  buttonFooter.addEventListener('click', () => {
-    alert('successful subscription');
-  })

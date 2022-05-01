@@ -10,9 +10,6 @@ const itemTotales = document.querySelector('.item__total')
 const detalles = document.getElementById('detalles')
 let buttonFooter = document.querySelector('.fButton');
 
-
-
-
 let carrito = []
 let buttonDOM = []
 
@@ -332,6 +329,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 
 
+
+/*todo lo que no es el carrito*/
+
+
+
+buttonFooter.addEventListener('click', () => {
+  alert('successful subscription');
+})
 
 // image collage
 
