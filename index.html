@@ -16,7 +16,7 @@
         'event': 'Pageview',
         'pagePath': 'https://mteresamilanes.github.io/ecommerceWatches.github.io/',
         'pageTitle': 'ECommerce',
-        'visitorType': 'user'
+        'visitorType': 'user',
       })
     </script>
     <script src="./js/scriptGA.js"></script>
@@ -28,13 +28,13 @@
     <nav class="nav">
       <div class="nav__center container">
         <a href="./index.html">
-          <div class="nav__logo" onclick="myfunction()">
-            <span class="iconify" id="logoIcon" data-icon="arcticons:activitywatch"></span>
+          <div class="nav__logo">
+            <span class="iconify"  data-icon="arcticons:activitywatch" ></span>
           </div>
         </a>
         <ul class="links-container">
           <li class="link-item"><a href="./index.html" class="link active">home</a></li>
-          <li class="link-item"><a href="./product-list.html" class="link" >products</a></li>
+          <li class="link-item"><a href="./product-list.html" class="link">products</a></li>
           <li class="link-item"><a href="./contact.html" class="link">contact</a></li>
         </ul>
         <ul class="nav__list">
@@ -90,7 +90,7 @@
     <!-- review section -->
 
     <section class="review-section">
-      <h1 class="section-title">what out <span>customers</span> says about us</h1>
+      <h1 class="section-title" id="titleReview" onclick="myFunction()">what out <span>customers</span> says about us</h1>
       <div class="review-container">
         <div class="review-card">
           <div class="user-dp" data-rating="4.9"><img src="img/user 1.png" alt=""></div>
