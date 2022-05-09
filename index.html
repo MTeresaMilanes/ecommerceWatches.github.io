@@ -26,8 +26,9 @@
         'pageTitle': 'ECommerce',
         'visitorType': 'user',
       })
+
+      
     </script>
-    <script src="./js/scriptGA.js"></script>
     <title>Online Store - Home Page</title>
   </head>
   <body>
@@ -83,22 +84,21 @@
     </section>
 
     <!-- Video section -->
-    <section class="video-section">
+    <section class="video-section" >
       <div class="section-item-container">
         <!-- <img src="./img/bg-3.jpg" class="section-bg" alt=""> -->
         <div class="section-info">
           <h1 class="title">get <span>inspiration</span></h1>
           <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sequi aliquam quas sapiente repellendus soluta!</p>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/I8AyFs2uESg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      
+        <iframe  id="player" width="560" height="315" data-id="I8AyFs2uESg" src="https://www.youtube.com/embed/I8AyFs2uESg?enablejsapi=1&amp;widgetid=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
 
     <!-- review section -->
 
     <section class="review-section">
-      <h1 class="section-title" id="titleReview" onclick="myFunction()">what out <span>customers</span> says about us</h1>
+      <h1 class="section-title" id="titleReview">what out <span>customers</span> says about us</h1>
       <div class="review-container">
         <div class="review-card">
           <div class="user-dp" data-rating="4.9"><img src="img/user 1.png" alt=""></div>
@@ -190,7 +190,7 @@
         </div>
     </footer>
     <script src="./js/main.js"></script>
-    
-
+    <script src="./js/scriptGA.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
   </body>
 </html>
