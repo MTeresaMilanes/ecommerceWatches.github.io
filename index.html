@@ -18,8 +18,6 @@
       })(window,document,'script','dataLayer','GTM-PW429BM');
     </script>
     <!-- End Google Tag Manager -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
     <script>
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
@@ -173,7 +171,7 @@
         <div class="footerRight">
           <div class="footerRightMenu">
             <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
-            <button class="fButton">Join!</button>
+            <button class="fButton" onclick="gtag('event', 'click',{'event_category':'button', 'event_label': 'submit_join_newsletter'});">Join!</button>
             <div class="fMail">
             </div>
           </div>
