@@ -33,6 +33,8 @@ function eventClick(){
   gtag(dataLayer.push({
     'event': 'click_join_button', 
     'click_type' : 'button_join',
+    'event_category': 'button',
+    'event_label': 'Subscribe to our newsletter',
   }));
 }
 eventClick();
