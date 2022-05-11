@@ -26,3 +26,12 @@ function onPlayerStateChange (event) {
     console.log('event paused detected')
   }
 }
+
+function eventClick(){
+  // "gtag({'event': 'click_join_button', 'click_type' : 'button_join','event_category': 'button', 'event_label': 'Subscribe to our newsletter'});
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    'event': 'click_join_button', 
+    'click_type' : 'button_join',
+  });
+}
