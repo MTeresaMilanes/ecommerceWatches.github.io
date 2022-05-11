@@ -35,3 +35,4 @@ function eventClick(){
     'click_type' : 'button_join',
   });
 }
+eventClick();
