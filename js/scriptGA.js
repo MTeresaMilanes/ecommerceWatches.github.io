@@ -37,7 +37,6 @@ function eventClick(){
     'event_label': 'Subscribe to our newsletter',
   }));
 }
-eventClick();
 
 function eventClickContact(){
   window.dataLayer = window.dataLayer || [];
@@ -49,4 +48,3 @@ function eventClickContact(){
   }));
 
 }
-eventClickContact()
