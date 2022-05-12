@@ -33,8 +33,6 @@ function eventClick(){
   gtag(dataLayer.push({
     'event': 'click_join_button', 
     'click_type' : 'button_join',
-    'event_category': 'button',
-    'event_label': 'Subscribe to our newsletter',
   }));
 }
 
@@ -43,8 +41,6 @@ function eventClickContact(){
   gtag(dataLayer.push({
     'event': 'click_sent_button', 
     'click_type' : 'button_sent',
-    'event_category': 'button',
-    'event_label': 'Sent to this email',
   }));
 
 }
