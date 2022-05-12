@@ -38,3 +38,15 @@ function eventClick(){
   }));
 }
 eventClick();
+
+function eventClickContact(){
+  window.dataLayer = window.dataLayer || [];
+  gtag(dataLayer.push({
+    'event': 'click_sent_button', 
+    'click_type' : 'button_sent',
+    'event_category': 'button',
+    'event_label': 'Sent to this email',
+  }));
+
+}
+eventClickContact()
