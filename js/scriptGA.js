@@ -70,13 +70,13 @@ applyBtn.addEventListener('click', () => {
     alert('Form was successfully submitted')
   }
   window.dataLayer = window.dataLayer || [];
-  gtag(dataLayer = [{
+  gtag(dataLayer.push({
     'event': 'click_sent_button', 
     'click_type' : 'button_sent',
     'email' : customerEmail,
     'contact number' : customerNumber,
     'customer name' : customerName,
-  }]);
+  }));
 
 
 })
