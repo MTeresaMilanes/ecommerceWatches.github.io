@@ -27,15 +27,20 @@ function onPlayerStateChange (event) {
   }
 }
 
-function eventClick(){
-  // "gtag({'event': 'click_join_button', 'click_type' : 'button_join','event_category': 'button', 'event_label': 'Subscribe to our newsletter'});
+function joinClick(){
   window.dataLayer = window.dataLayer || [];
   gtag(dataLayer.push({
     'event': 'click_join_button', 
     'click_type' : 'button_join',
   }));
 }
-
+function mailmeClick(){
+  window.dataLayer = window.dataLayer || [];
+  gtag(dataLayer.push({
+    'event': 'click_mailme_button', 
+    'click_type' : 'button_mailme',
+  }));
+}
 
 const showFormError = (err) => {
   let errorEle = document.querySelector('.error');
