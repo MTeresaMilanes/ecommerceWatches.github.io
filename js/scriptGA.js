@@ -57,7 +57,7 @@ applyBtn.addEventListener('click', () => {
   let expRegEmail= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
   let isValidEmail = expRegEmail.test(customerEmail);
 
-  if(!customerName.length || !customerEmail.length || !isValidEmail || !customerMessage || customerNumber.length < 10 || !Number(customerNumber)){
+  if(!customerName.length || !customerEmail.length || !isValidEmail || !customerMessage || customerNumber.length < 9 || !Number(customerNumber)){
     if(!isValidEmail) {
       showFormError('email is not valid');
       console.log(customerEmail);
