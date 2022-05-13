@@ -8,7 +8,7 @@ const carritoTotal = document.querySelector('.carrito__total')
 const clearCarritoBtn = document.querySelector('.clear__carrito')
 const itemTotales = document.querySelector('.item__total')
 const detalles = document.getElementById('detalles')
-let buttonFooter = document.querySelector('.fButton');
+
 
 let carrito = []
 let buttonDOM = []
@@ -332,11 +332,48 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 /*todo lo que no es el carrito*/
 
+const showFormError = (err) => {
+  let errorEle = document.querySelector('.error');
+  errorEle.innerHTML = err;
+  errorEle.classList.add('show')
 
+  setTimeout(() => {
+      errorEle.classList.remove('show')
+  }, 2000)
+}
 
-buttonFooter.addEventListener('click', () => {
-  alert('successful subscription');
+let applyBtn = document.querySelector('.apply-btn');
+applyBtn.addEventListener('click', () => {
+  let customerName = document.querySelector('#name').value;
+  let customerEmail = document.querySelector('#email').value;
+  let customerMessage = document.querySelector('#message').value;
+  let customerNumber = document.querySelector('#number').value;
+  let expRegEmail= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  let isValidEmail = expRegEmail.test(customerEmail);
+
+  if(!customerName.length || !customerEmail.length || !isValidEmail || !customerMessage || customerNumber.length < 9 || !Number(customerNumber)){
+    if(!isValidEmail) {
+      showFormError('email is not valid');
+      console.log(customerEmail);
+      console.log(isValidEmail);
+    }else{
+      showFormError('some information(s) is/are incorrect');
+      console.log(isValidEmail);
+    }
+  }else{
+    alert('Form was successfully submitted')
+    window.dataLayer = window.dataLayer || [];
+    gtag(dataLayer.push({
+      'event': 'click_sent_button', 
+      'click_type' : 'button_sent',
+      'email' : customerEmail,
+      'contact number' : customerNumber,
+      'customer name' : customerName,
+    }));
+  }
 })
+
+
 
 // image collage
 
@@ -359,39 +396,7 @@ collageImages.map((item, i) => {
   })
 })
 
-const showFormError = (err) => {
-  let errorEle = document.querySelector('.error');
-  errorEle.innerHTML = err;
-  errorEle.classList.add('show')
 
-  setTimeout(() => {
-      errorEle.classList.remove('show')
-  }, 2000)
-}
-
-let applyBtn = document.querySelector('.apply-btn');
-
-applyBtn.addEventListener('click', () => {
-  let customerName = document.querySelector('#name').value;
-  let customerEmail = document.querySelector('#email').value;
-  let customerMessage = document.querySelector('#message').value;
-  let customerNumber = document.querySelector('#number').value;
-  let expRegEmail= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-  let isValidEmail = expRegEmail.test(customerEmail);
-
-  if(!customerName.length || !customerEmail.length || !isValidEmail || !customerMessage || customerNumber.length < 10 || !Number(customerNumber)){
-    if(!isValidEmail) {
-      showFormError('email is not valid');
-      console.log(customerEmail);
-      console.log(isValidEmail);
-    }else{
-      showFormError('some information(s) is/are incorrect');
-      console.log(isValidEmail);
-    }
-  }else{
-    alert('Form was successfully submitted')
-  }
-})
 
 
 
