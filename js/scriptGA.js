@@ -77,8 +77,4 @@ applyBtn.addEventListener('click', () => {
     'contact number' : customerNumber,
     'customer name' : customerName,
   }));
-  gtag('config', 'UA-228361712-1', {
-    'custom_map': {'dimension1': 'Contact Form'}
-  });
-
 })
