@@ -27,11 +27,15 @@ function onPlayerStateChange (event) {
     console.log('event paused detected')
   }
 }
+
 let buttonFooter = document.querySelector('.fButton');
 buttonFooter.addEventListener('click', () => {
   alert('successful subscription');
 })
-
+let buttonEmail = document.querySelector('.mailme');
+buttonEmail.addEventListener('click', () => {
+  alert('successful click mailme')
+})
 function joinClick(){
   window.dataLayer = window.dataLayer || [];
   gtag(dataLayer.push({
