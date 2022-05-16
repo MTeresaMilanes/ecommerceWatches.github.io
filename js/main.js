@@ -13,6 +13,30 @@ const detalles = document.getElementById('detalles')
 let carrito = []
 let buttonDOM = []
 
+
+
+// image collage
+
+const collageImages = [...document.querySelectorAll('.collage-img')]
+
+collageImages.map((item, i) => {
+  item.addEventListener('mouseover', () => {
+    collageImages.map((image, index) => {
+      if (index != i) {
+        image.style.filter = `blur(10px)`
+        item.style.zIndex = 2
+      }
+    })
+  })
+
+  item.addEventListener('mouseleave', () => {
+    collageImages.map((image, index) => {
+      image.style = null
+    })
+  })
+})
+
+
 class UI {
   detalleProducto (id) {
     const filtroDato = productos.filter(item => item.id == id)
@@ -374,27 +398,6 @@ applyBtn.addEventListener('click', () => {
 })
 
 
-
-// image collage
-
-const collageImages = [...document.querySelectorAll('.collage-img')]
-
-collageImages.map((item, i) => {
-  item.addEventListener('mouseover', () => {
-    collageImages.map((image, index) => {
-      if (index != i) {
-        image.style.filter = `blur(10px)`
-        item.style.zIndex = 2
-      }
-    })
-  })
-
-  item.addEventListener('mouseleave', () => {
-    collageImages.map((image, index) => {
-      image.style = null
-    })
-  })
-})
 
 
 
