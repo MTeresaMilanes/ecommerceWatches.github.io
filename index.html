@@ -16,7 +16,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-228361712-1');
+    gtag('config', 'UA-228361712-1', {
+      'user_id': 'USER_ID'
+    });
+    gtag('set', 'user_properties', {
+      'crm_id' : 'USER_ID'
+    });
   </script>
 
   <script>
