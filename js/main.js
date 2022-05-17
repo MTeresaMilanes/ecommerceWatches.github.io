@@ -84,45 +84,52 @@ class UI {
   }
 
   renderProductos (productos) {
+    let url = 'product.json';
     let result = ''
     productos.forEach(producto => {
       result += `
 			<div class="producto">
-			<div class="image__container">
-			<img src=${producto.image} alt="">
-		</div>
-          <div class="producto__footer">
-            <h1>${producto.title}</h1>
-            <div class="rating">
-              <span>
-                <span class="iconify" data-icon="bi:star-fill"></span>
-              </span>
-              <span>
-                <span class="iconify" data-icon="bi:star-fill"></span>
-              </span>
-              <span>
-                <span class="iconify" data-icon="bi:star-fill"></span>
-              </span>
-              <span>
-                <span class="iconify" data-icon="bi:star-fill"></span>
-              </span>
-              <span>
-                <span class="iconify" data-icon="carbon:star"></span>
-              </span>
-            </div>
-            <div class="price">$${producto.price}</div>
+        <div class="image__container">
+          <img src=${producto.image} alt="">
+        </div>
+        <div class="producto__footer">
+          <h1>${producto.title}</h1>
+          <div class="rating">
+            <span>
+              <span class="iconify" data-icon="bi:star-fill"></span>
+            </span>
+            <span>
+              <span class="iconify" data-icon="bi:star-fill"></span>
+            </span>
+            <span>
+              <span class="iconify" data-icon="bi:star-fill"></span>
+            </span>
+            <span>
+              <span class="iconify" data-icon="bi:star-fill"></span>
+            </span>
+            <span>
+              <span class="iconify" data-icon="carbon:star"></span>
+            </span>
           </div>
-          <div class="bottom">
-            <div class="btn__group">
-              <button class="btn addToCart" data-id=${producto.id}>Add Your Cart</button>
-              <a href="./product-details.html?id=${producto.id}" class="btn view">View Details</a>
-            </div>
+          <div class="price">$${producto.price}</div>
+        </div>
+        <div class="bottom">
+          <div class="btn__group">
+            <button class="btn addToCart" data-id=${producto.id}>Add Your Cart</button>
+            
+            <button class="btnview" data-id=${producto.id}>View Details</button>
           </div>
         </div>
-				`
+      </div>`
     })
     productoDOM.innerHTML = result
+    let btn = document.querySelector('.btnview')
+    btn.addEventListener('click', () => {
+      console.log('hola')
+    })
   }
+
+  
 
   getButtons () {
     const buttons = [...document.querySelectorAll('.addToCart')]
@@ -304,7 +311,7 @@ class Productos {
     try {
       const result = await fetch('product.json')
       const data = await result.json()
-      const productos = data.items
+      const productos = data.items 
       return productos
     } catch (err) {
       console.log(err)

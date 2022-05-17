@@ -1,4 +1,3 @@
-
 var player
 function onYouTubeIframeAPIReady () {
   player = new YT.Player('player', {
@@ -43,8 +42,6 @@ function joinClick(){
     'click_type' : 'button_join',
   }));
 }
-
-
 function mailmeClick(){
   window.dataLayer = window.dataLayer || [];
   gtag(dataLayer.push({
