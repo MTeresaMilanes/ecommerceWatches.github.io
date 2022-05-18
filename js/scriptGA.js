@@ -37,16 +37,16 @@ buttonEmail.addEventListener('click', () => {
 })
 function joinClick(){
   window.dataLayer = window.dataLayer || [];
-  gtag(dataLayer.push({
+  dataLayer.push({
     'event': 'click_join_button', 
     'click_type' : 'button_join',
-  }));
+  });
 }
 function mailmeClick(){
   window.dataLayer = window.dataLayer || [];
-  gtag(dataLayer.push({
+  dataLayer.push({
     'event': 'click_mailme_button', 
     'click_type' : 'button_mailme',
-  }));
+  });
 }
 
