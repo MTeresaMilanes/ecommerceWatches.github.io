@@ -1,271 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Store - Product Page</title>
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap"rel="stylesheet"/>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="stylesheet" href="./css/styleApp.css"/>
-    <link rel="stylesheet" href="./css/styleForm.css">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PW429BM');
-    </script>
-    <!-- End Google Tag Manager -->
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PW429BM');
+  </script>
+  <!-- End Google Tag Manager -->
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      dataLayer.push({ 
-        'event': 'pageview_watch',
-        'pagePath': 'https://mteresamilanes.github.io/ecommerceWatches.github.io/',
-        'pageTitle': 'ECommerce',
-        'visitor_type': 'user', 
-        items: [
-          {
-            'id': 1,
-            "title": "Rolex Datejust",
-            "price": 101,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305",
-            "category": "rolex"
-          },
-          {
-            "id": 2,
-            "title": "OMEGA Speedmaster",
-            "price": 104,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305",
-            "category": "omega"
-          },
-          {
-            "id": 3,
-            "title": "AUDEMARS PIGUET",
-            "price": 75,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1177-wugpfdlkkz5ie2od4y1w8rlm-Original.png?auto=compress&amp;h=305",
-            "category": "audemars"
-          },
-          {
-            "id": 4,
-            "title": "HUBLOT Big Bang",
-            "price": 99,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305",
-            "category": "hublot"
-          },
-          {
-            "id": 5,
-            "title": "ROLEX Day-Date",
-            "price": 105,
-            "image": "https://cdn4.chrono24.com/images/topmodels/48-coj40rpfx8fwxs9h0nl1l5z5-Original.png?auto=compress&amp;h=305",
-            "category": "rolexDay"
-          },
-          {
-            "id": 6,
-            "title": "TAG HEUER Carrera Calibre",
-            "price": 85,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1023-knl4kmo66jmse324vzq1rit9-Original.png?auto=compress&amp;h=305",
-            "category": "tag"
-          },
-          {
-            "id": 7,
-            "title": "Rolex Datejust",
-            "price": 60,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2889-i234z41cn7v0n4vanfhte4w4-Original.png?auto=compress&amp;h=305",
-            "category": "rolex"
-          },
-          {
-            "id": 8,
-            "title": "OMEGA Speedmaster",
-            "price": 35,
-            "image": "https://cdn4.chrono24.com/images/topmodels/277-q51jko3qp053cwsfydfnmp8r-Original.png?auto=compress&amp;h=305",
-            "category": "omega"
-          },
-          {
-            "id": 9,
-            "title": "AUDEMARS PIGUET",
-            "price": 799,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2784-sol59z6xc26pvisg1s4yyhz7-Original.png?auto=compress&amp;h=305",
-            "category": "audemars"
-          },
-          {
-            "id": 10,
-            "title": "HUBLOT Big Bang",
-            "price": 101,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1060-60mnke18crk8dtva1dday8aq-Original.png?auto=compress&amp;h=305",
-            "category": "hublot"
-          },
-          {
-            "id": 11,
-            "title": "ROLEX Day-Date",
-            "price": 650,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2789-kz9cslhfzhl5hluyhyik13vh-Original.png?auto=compress&amp;h=305",
-            "category": "rolexDay"
-          },
-          {
-            "id": 12,
-            "title": "TAG HEUER Carrera Calibre",
-            "price": 65,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1024-kun413lxk7kb6xba9sow5f81-Original.png?auto=compress&amp;h=305",
-            "category": "tag"
-          },
-          {
-            "id": 13,
-            "title": "Rolex Datejust",
-            "price": 101,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2827-syc8dandfne5fr49dsnu9oai-Original.png?auto=compress&amp;h=305",
-            "category": "rolex"
-          },
-          {
-            "id": 14,
-            "title": "OMEGA Speedmaster",
-            "price": 104,
-            "image": "https://cdn4.chrono24.com/images/topmodels/71-js248idvdav3retnmx2uc6wx-Original.png?auto=compress&amp;h=305",
-            "category": "omega"
-          },
-          {
-            "id": 15,
-            "title": "AUDEMARS PIGUET",
-            "price": 75,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1176-hs3tqa0p4c96tsxn2cn2uo6w-Original.png?auto=compress&amp;h=305",
-            "category": "audemars"
-          },
-          {
-            "id": 16,
-            "title": "HUBLOT Big Bang",
-            "price": 99,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1058-1jormktv8artxf3enlapuh13-Original.png?auto=compress&amp;h=305",
-            "category": "hublot"
-          },
-          {
-            "id": 17,
-            "title": "ROLEX Day-Date",
-            "price": 105,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2884-5ef4thk0sttcydmk5692nply-Original.png?auto=compress&amp;h=305",
-            "category": "rolexDay"
-          },
-          {
-            "id": 18,
-            "title": "TAG HEUER Carrera Calibre",
-            "price": 85,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1024-kun413lxk7kb6xba9sow5f81-Original.png?auto=compress&amp;h=305",
-            "category": "tag"
-          },
-          {
-            "id": 19,
-            "title": "Rolex Datejust",
-            "price": 60,
-            "image": "https://cdn4.chrono24.com/images/topmodels/53-qr7rjp3uwl4jco6w9zezewr6-Original.png?auto=compress&amp;h=305",
-            "category": "rolex"
-          },
-          {
-            "id": 20,
-            "title": "OMEGA Speedmaster",
-            "price": 35,
-            "image": "https://cdn4.chrono24.com/images/topmodels/242-uk37he1f5vgdtk9unr5570ct-Original.png?auto=compress&amp;h=3055",
-            "category": "omega"
-          },
-          {
-            "id": 21,
-            "title": "AUDEMARS PIGUET",
-            "price": 99,
-            "image": "https://cdn4.chrono24.com/images/topmodels/118-6lbsu9lmivq8w0y0nqrk5j45-Original.png?auto=compress&amp;h=305",
-            "category": "audemars"
-          },
-          {
-            "id": 22,
-            "title": "HUBLOT Big Bang",
-            "price": 101,
-            "image": "https://cdn4.chrono24.com/images/topmodels/1060-60mnke18crk8dtva1dday8aq-Original.png?auto=compress&amp;h=305",
-            "category": "hublot"
-          },
-          {
-            "id": 23,
-            "title": "ROLEX Day-Date",
-            "price": 65,
-            "image": "https://cdn4.chrono24.com/images/topmodels/954-oel0a5omxgsfsc717gx0p1na-Original.png?auto=compress&amp;h=305",
-            "category": "rolexDay"
-          },
-          {
-            "id": 24,
-            "title": "TAG HEUER Carrera Calibre",
-            "price": 65,
-            "image": "https://cdn4.chrono24.com/images/topmodels/2848-rrxe8hk918f7plrrfgzbxt65-Original.png?auto=compress&amp;h=305",
-            "category": "tag"
-          }
-        ]
-      }); 
-    </script>
-    
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="nav">
-      <div class="nav__center container">
-        <a href="./index.html">
-          <div class="nav__logo">
-            <span class="iconify" data-icon="arcticons:activitywatch"></span>
-          </div>
-        </a>
-        <ul class="links-container">
-          <li class="link-item"><a href="./index.html" class="link active">home</a></li>
-          <li class="link-item"><a href="./product-list.html" class="link">products</a></li>
-          <li class="link-item"><a href="./contact.html" class="link">contact</a></li>
-        </ul>
-        <ul class="nav__list">
-          <div class="carrito__icon">
-            <span class="iconify" data-icon="carbon:user-avatar-filled-alt"></span>
-            <span class="iconify" data-icon="dashicons:cart"></span>
-            <span class="item__total">0</span>
-          </div>
-        </ul>
-      </div>
-    </nav>
-
-    <!--Filter-->
-    <section class="filter">
-      <div class="grid">
-        <div class="category">
-          <select id="category" onclick="categoryValue()">
-            <option value="">Marcas</option>
-            <option value="rolex" id="rolex" onclick="myFunction()">Rolex</option>
-            <option value="omega">Omega</option>
-            <option value="audemars">Audemars</option>
-            <option value="rolexDay">Rolex Day</option>
-            <option value="hublot">Hublot</option>
-            <option value="tag">Tag Heuer</option>
-          </select>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Store - Product Page</title>
+  <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap"rel="stylesheet"/>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="stylesheet" href="./css/styleApp.css"/>
+  <link rel="stylesheet" href="./css/styleForm.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="nav__center container">
+      <a href="./index.html">
+        <div class="nav__logo">
+          <span class="iconify" data-icon="arcticons:activitywatch"></span>
         </div>
-      </div>
-    </section>
-
-    <!--Productos-->
-    <section class="productos">
-      <div class="productos__center"></div>
-    </section>
-
-    <!--Carrito-->
-    
-    <section class="carrito__overlay">
-      <div class="carrito">
-        <span class="close__carrito">
-          <span class="iconify" data-icon="carbon:close-outline"></span>
-        </span>
-        <h1>your cart</h1>
-        <div class="carrito__center"></div>
-        <div class="carrito__footer">
-          <h3>Total: $ <span class="carrito__total">0</span></h3>
-          <button class="clear__carrito btn">Delete all</button>
-          <a href="./placeOrder.html"><button class="place__order btn">Place Order</button></a>
+      </a>
+      <ul class="links-container">
+        <li class="link-item"><a href="./index.html" class="link active">home</a></li>
+        <li class="link-item"><a href="./product-list.html" class="link">products</a></li>
+        <li class="link-item"><a href="./contact.html" class="link">contact</a></li>
+      </ul>
+      <ul class="nav__list">
+        <div class="carrito__icon">
+          <span class="iconify" data-icon="carbon:user-avatar-filled-alt"></span>
+          <span class="iconify" data-icon="dashicons:cart"></span>
+          <span class="item__total">0</span>
         </div>
-      </div>
-    </section>
+      </ul>
+    </div>
+  </nav>
 
-    <script src="./js/main.js"></script>  
-    <script src="./js/scriptGA.js"></script>
-  </body>
+  <!--Filter-->
+  <section class="filter">
+    <div class="grid">
+      <div class="category">
+        <select id="category" onclick="categoryValue()">
+          <option value="">Marcas</option>
+          <option value="rolex" id="rolex" onclick="myFunction()">Rolex</option>
+          <option value="omega">Omega</option>
+          <option value="audemars">Audemars</option>
+          <option value="rolexDay">Rolex Day</option>
+          <option value="hublot">Hublot</option>
+          <option value="tag">Tag Heuer</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!--Productos-->
+  <section class="productos">
+    <div class="productos__center"></div>
+  </section>
+
+  <!--Carrito-->
+  
+  <section class="carrito__overlay">
+    <div class="carrito">
+      <span class="close__carrito">
+        <span class="iconify" data-icon="carbon:close-outline"></span>
+      </span>
+      <h1>your cart</h1>
+      <div class="carrito__center"></div>
+      <div class="carrito__footer">
+        <h3>Total: $ <span class="carrito__total">0</span></h3>
+        <button class="clear__carrito btn">Delete all</button>
+        <a href="./placeOrder.html"><button class="place__order btn">Place Order</button></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/main.js"></script>  
+  <script src="./js/scriptGA.js"></script>
+</body>
 </html>

@@ -42,6 +42,13 @@ class UI {
     const filtroDato = productos.filter(item => item.id == id)
     let result = ''
     filtroDato.forEach(producto => {
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'product-details',
+        'productId':producto.id,
+        'productName':producto.title,
+        'productPrice':producto.price,
+      })
       result += `
 			<article class="detalle-grid">
 				<img src=${producto.image} alt="${producto.title}" class="img-fluid">
@@ -81,10 +88,11 @@ class UI {
 			`
     })
     detalles.innerHTML = result
+    console.log(filtroDato)
+
   }
 
   renderProductos (productos) {
-    let url = 'product.json';
     let result = ''
     productos.forEach(producto => {
       result += `
@@ -116,17 +124,12 @@ class UI {
         <div class="bottom">
           <div class="btn__group">
             <button class="btn addToCart" data-id=${producto.id}>Add Your Cart</button>
-            
-            <button class="btnview" data-id=${producto.id}>View Details</button>
+            <a href="product-details.html?id=${producto.id}" class="btn view">View Details</a>
           </div>
         </div>
       </div>`
     })
     productoDOM.innerHTML = result
-    let btn = document.querySelector('.btnview')
-    btn.addEventListener('click', () => {
-      console.log('hola')
-    })
   }
 
   
