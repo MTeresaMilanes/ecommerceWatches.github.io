@@ -50,3 +50,21 @@ function mailmeClick(){
   });
 }
 
+let http = new XMLHttpRequest();
+http.open('get', 'product.json', true);
+http.send();
+http.onload = function() {
+  if(this.readyState == 4 && this.status == 200) {
+    let products = JSON.parse(this.responseText);
+    console.log(products);
+    let output = '';
+    for(let item in products) {
+      output += `<div class="card">
+      <img class="card-img-top" src="${item.image}" alt="Card image cap"></div>`
+    }
+    document.querySelector('.image-collage').innerHTML = output;
+  }
+  
+}
+
+

@@ -17,24 +17,24 @@ let buttonDOM = []
 
 // image collage
 
-const collageImages = [...document.querySelectorAll('.collage-img')]
+// const collageImages = [...document.querySelectorAll('.collage-img')]
 
-collageImages.map((item, i) => {
-  item.addEventListener('mouseover', () => {
-    collageImages.map((image, index) => {
-      if (index != i) {
-        image.style.filter = `blur(10px)`
-        item.style.zIndex = 2
-      }
-    })
-  })
+// collageImages.map((item, i) => {
+//   item.addEventListener('click', () => {
+//     collageImages.map((image, index) => {
+//       if (index != i) {
+//         image.style.filter = `blur(10px)`
+//         item.style.zIndex = 2
+//       }
+//     })
+//   })
 
-  item.addEventListener('mouseleave', () => {
-    collageImages.map((image, index) => {
-      image.style = null
-    })
-  })
-})
+//   item.addEventListener('mouseleave', () => {
+//     collageImages.map((image, index) => {
+//       image.style = null
+//     })
+//   })
+// })
 
 
 class UI {
@@ -121,7 +121,7 @@ class UI {
         </div>
         <div class="bottom">
           <div class="btn__group">
-            <button onclick="UI.detalleProducto().eventDetails();" class="btn addToCart" data-id=${producto.id}>Add Your Cart</button>
+            <button class="btn addToCart" data-id=${producto.id}>Add Your Cart</button>
             <a href="product-details.html?id=${producto.id}"  class="btn view">View Details</a>
           </div>
         </div>
@@ -287,6 +287,7 @@ class UI {
   singleButton (id) {
     return buttonDOM.find(button => parseInt(button.dataset.id) === id)
   }
+
 }
 
 class Storage {
