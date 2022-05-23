@@ -50,21 +50,48 @@ function mailmeClick(){
   });
 }
 
-let http = new XMLHttpRequest();
-http.open('get', 'product.json', true);
-http.send();
-http.onload = function() {
-  if(this.readyState == 4 && this.status == 200) {
-    let products = JSON.parse(this.responseText);
-    console.log(products);
-    let output = '';
-    for(let item in products) {
-      output += `<div class="card">
-      <img class="card-img-top" src="${item.image}" alt="Card image cap"></div>`
-    }
-    document.querySelector('.image-collage').innerHTML = output;
-  }
+
+fetch('./product.json')
+.then(function(response){
+  return response.json();
+})
+.then(function(products){
+  let placeholder = document.querySelector('.image-collage');
   
-}
+
+  let out = "";
+  for(let product of Object.keys(products)){    
+    out += `
+    <div class="card" >
+      <img src="${products[product][0].image}" class="image" data-id="${products[product][0].id}" data-name="${products[product][0].title}">
+    </div>
+    <div class="card" >
+      <img src="${products[product][1].image}" class="image" data-id="${products[product][1].id}" data-name="${products[product][1].title}">
+    </div>
+    <div class="card" >
+      <img src="${products[product][2].image} class="image" data-id="${products[product][2].id}" data-name="${products[product][2].title}">
+    </div>
+    <div class="card" >
+      <img src="${products[product][3].image} class="image" data-id="${products[product][3].id}" data-name="${products[product][3].title}">
+    </div>
+    <div class="card" >
+      <img src="${products[product][4].image} class="image" data-id="${products[product][4].id}" data-name="${products[product][4].title}">
+    </div>
+    `;
+  
+  }
+  placeholder.innerHTML = out;
+  let cards = document.getElementsByClassName('card');
+  for(let card of cards) {
+    card.addEventListener('click', function (e) {
+      e.preventDefault();
+      let element = e.target;
+      let dataId = element.getAttribute('data-id');
+      let dataName = element.getAttribute('data-name');
+      console.log('id: ' + dataId)
+      console.log('title: ' + dataName)
+    })
+  }
+})
 
 
