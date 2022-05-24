@@ -88,8 +88,12 @@ fetch('./product.json')
       let element = e.target;
       let dataId = element.getAttribute('data-id');
       let dataName = element.getAttribute('data-name');
-      console.log('id: ' + dataId)
-      console.log('title: ' + dataName)
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'click_image',
+        'dataId': dataId,
+        'dataName': dataName,
+      });
     })
   }
 })
