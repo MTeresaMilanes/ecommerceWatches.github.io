@@ -403,6 +403,9 @@ applyBtn.addEventListener('click', () => {
       'contact number' : customerNumber,
       'customer name' : customerName,
     });
+    dataLayer.push({
+      'event' : 'generate_lead'
+    })
   }
 })
 
