@@ -23,8 +23,9 @@ body{
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  justify-items: spa;
 }
 
 .form-title{
@@ -33,7 +34,12 @@ body{
   text-transform: capitalize;
   margin-bottom: 40px;
 }
-
+.form-title2{
+  font-size: 1.8rem;
+  color: #1d9525;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
 input, textarea{
   width: 70%;
   border: 1px solid #ccc;
@@ -78,4 +84,13 @@ textarea{
 .apply-btn2 a{
   text-decoration: none;
   color: #fff;
+}
+
+.iconify {
+  width: 100px;
+  height: 100px;
+  color: #1d9525;
+}
+h3{
+  color: #9744b8;
 }
