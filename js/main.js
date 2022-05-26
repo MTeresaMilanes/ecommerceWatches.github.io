@@ -394,7 +394,6 @@ applyBtn.addEventListener('click', () => {
       console.log(isValidEmail);
     }
   }else{
-    location.replace('./thanYouFormContact.html');
     window.dataLayer = window.dataLayer || [];
     dataLayer.push({
       'event': 'contact_form', 

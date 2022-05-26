@@ -54,8 +54,6 @@ function validate_cvv(cvv){
 let paymentBtn = document.querySelector('.payment-order-btn');
 
 paymentBtn.addEventListener('click', () => {
-  // location.replace('./thankYouPageCart.html');
-
   window.dataLayer = window.dataLayer || [];
   dataLayer.push({'event' : 'generate_lead_cart'});  
 
