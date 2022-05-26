@@ -13,14 +13,14 @@ function numberValidation(e){
 }
 
 function formatString(e) {
-  var inputChar = String.fromCharCode(event.keyCode);
-  var code = event.keyCode;
+  var inputChar = String.fromCharCode(e.keyCode);
+  var code = e.keyCode;
   var allowedKeys = [8];
   if (allowedKeys.indexOf(code) !== -1) {
     return;
   }
 
-  event.target.value = event.target.value.replace(
+  e.target.value = event.target.value.replace(
     /^([1-9]\/|[2-9])$/g, '0$1/' // 3 > 03/
   ).replace(
     /^(0[1-9]|1[0-2])$/g, '$1/' // 11 > 11/
@@ -49,12 +49,15 @@ function validate_cvv(cvv){
       return true;  //valid cvv number
      }
 
-  }
+}
 
-  let paymentBtn = document.querySelector('.payment-order-btn');
+let paymentBtn = document.querySelector('.payment-order-btn');
 
-  paymentBtn.addEventListener('click', () => {
-    console.log('payment')
-    alert('Successful payment');
-  })
+paymentBtn.addEventListener('click', () => {
+  // location.replace('./thankYouPageCart.html');
+
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({'event' : 'generate_lead_cart'});  
+
+})
   
