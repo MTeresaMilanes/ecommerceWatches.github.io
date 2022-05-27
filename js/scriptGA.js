@@ -41,6 +41,7 @@ function joinClick(){
     'event': 'click_join_button', 
     'click_type' : 'button_join',
   });
+  location.replace('./https://mteresamilanes.github.io/ecommerceWatches.github.io/?utm_source=newsletter&utm_medium=email&utm_campaign=luxury+watch&utm_term=luxury')
 }
 function mailmeClick(){
   window.dataLayer = window.dataLayer || [];
