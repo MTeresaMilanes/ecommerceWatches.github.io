@@ -403,8 +403,9 @@ applyBtn.addEventListener('click', () => {
       'customer name' : customerName,
     });
     dataLayer.push({
-      'event' : 'generate_lead'
+      'event' : 'generate_lead',
     })
+    location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageFormContact.html'
   }
 })
 

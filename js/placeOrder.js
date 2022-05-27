@@ -56,6 +56,6 @@ let paymentBtn = document.querySelector('.payment-order-btn');
 paymentBtn.addEventListener('click', () => {
   window.dataLayer = window.dataLayer || [];
   dataLayer.push({'event' : 'generate_lead_cart'});  
-
+  location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageCart.html'
 })
   
