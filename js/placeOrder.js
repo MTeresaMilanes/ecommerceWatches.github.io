@@ -20,7 +20,7 @@ function formatString(e) {
     return;
   }
 
-  e.target.value = event.target.value.replace(
+  e.target.value = e.target.value.replace(
     /^([1-9]\/|[2-9])$/g, '0$1/' // 3 > 03/
   ).replace(
     /^(0[1-9]|1[0-2])$/g, '$1/' // 11 > 11/
