@@ -75,7 +75,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  animation: banner 10s linear infinite ease-in-out;
+  animation: banner 10s linear infinite alternate;
 }
 @keyframes banner{
   0%, 20%{
