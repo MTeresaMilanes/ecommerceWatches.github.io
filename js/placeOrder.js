@@ -59,6 +59,6 @@ paymentBtn.addEventListener('click', () => {
     transaction_id: '1234567',
     value: 234,
   });  
-  // location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageCart.html'
+  location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageCart.html'
 })
   
