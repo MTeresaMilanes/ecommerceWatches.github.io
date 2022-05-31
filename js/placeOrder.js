@@ -54,8 +54,11 @@ function validate_cvv(cvv){
 let paymentBtn = document.querySelector('.payment-order-btn');
 
 paymentBtn.addEventListener('click', () => {
-  window.dataLayer = window.dataLayer || [];
-  dataLayer.push({'event' : 'generate_lead_cart'});  
-  location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageCart.html'
+  gtag('event', 'purchase',{
+    currency: 'EUR',
+    transaction_id: '1234567',
+    value: 234,
+  });  
+  // location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageCart.html'
 })
   
