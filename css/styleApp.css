@@ -71,11 +71,11 @@ body{
   position: absolute;
   z-index: -1;
   left: 0;
-  top: 105px;
+  top: 100px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  animation: banner 10s linear infinite alternate;
+  animation: banner 10s linear infinite ease-in-out;
 }
 @keyframes banner{
   0%, 20%{
