@@ -54,7 +54,9 @@ function validate_cvv(cvv){
 let paymentBtn = document.querySelector('.payment-order-btn');
 
 paymentBtn.addEventListener('click', () => {
-  gtag('event', 'purchase',{
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    'event': 'purchase',
     currency: 'EUR',
     transaction_id: '1234567',
     value: 234,
