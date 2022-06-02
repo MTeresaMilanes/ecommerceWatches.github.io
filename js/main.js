@@ -213,7 +213,6 @@ class UI {
     // paymentDOM.classList.add('show')
     overlay.classList.add('show')
     carrito = Storage.getCart()
-    console.log(carrito)
     window.dataLayer = window.dataLayer || [];
     let arr = [];
     for (let index = 0; index < carrito.length; index++) {
