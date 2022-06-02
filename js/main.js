@@ -209,6 +209,17 @@ class UI {
     carritoDOM.classList.add('show')
     // paymentDOM.classList.add('show')
     overlay.classList.add('show')
+    carrito = Storage.getCart()
+    window.dataLayer = window.dataLayer || [];
+    // let arrProd = carrito;
+    // let item_id;
+    // arrProd.forEach(carro =>{
+    //   item_id = carro.id;
+    // })
+    dataLayer.push({
+      'event': 'view_cart',
+      currency : 'EUR',
+    })
   }
   hide () {
     carritoDOM.classList.remove('show')
@@ -383,7 +394,6 @@ applyBtn.addEventListener('click', () => {
   let customerNumber = document.querySelector('#number').value;
   let expRegEmail= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
   let isValidEmail = expRegEmail.test(customerEmail);
-
   if(!customerName.length || !customerEmail.length || !isValidEmail || !customerMessage || customerNumber.length < 9 || !Number(customerNumber)){
     if(!isValidEmail) {
       showFormError('email is not valid');
@@ -408,6 +418,8 @@ applyBtn.addEventListener('click', () => {
     location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageFormContact.html'
   }
 })
+
+
 
 
 
