@@ -209,19 +209,29 @@ class UI {
     carritoCenter.appendChild(div)
   }
   show () {
+    
     carritoDOM.classList.add('show')
     // paymentDOM.classList.add('show')
     overlay.classList.add('show')
     carrito = Storage.getCart()
     window.dataLayer = window.dataLayer || [];
     let arr = [];
+    let tempTotal = 0
+    let itemTotal = 0
+    carrito.map(item => {
+      tempTotal += item.price * item.cantidad
+      itemTotal += item.cantidad
+    })
     for (let index = 0; index < carrito.length; index++) {
       const element = carrito[index];
-      let token = {'item_id':element.id, 'item_name':element.title}
+      let token = {'item_id': element.id, 'item_name': element.title};
       arr.push(token);
     }
+    
     dataLayer.push({
       'event': 'view_cart',
+      currency : 'EUR',
+      value : tempTotal,
       items : arr,
     })
   }
