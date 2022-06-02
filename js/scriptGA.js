@@ -98,11 +98,11 @@ fetch('./product.json')
   }
 })
 
-let btn_banner = document.querySelector('.btn-more');
-btn_banner.addEventListener('click', () =>{
-  window.dataLayer = window.dataLayer || [];
-  dataLayer.push({
-    'event': 'click'
-  })
-})
+// let btn_banner = document.querySelector('.btn-more');
+// btn_banner.addEventListener('click', () =>{
+//   window.dataLayer = window.dataLayer || [];
+//   dataLayer.push({
+//     'event': 'click'
+//   })
+// })
 

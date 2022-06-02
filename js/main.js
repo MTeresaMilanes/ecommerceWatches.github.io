@@ -44,10 +44,13 @@ class UI {
     filtroDato.forEach(producto => {
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
-        'event': 'product-details',
-        'productId':producto.id,
-        'productName':producto.title,
-        'productPrice':producto.price,
+        'event': 'view_item',
+        currency : 'EUR',
+        value :producto.price,
+        items: [{
+          item_id : producto.id,
+          item_name : producto.title
+        }]
       });
       result += `
 			<article class="detalle-grid">
@@ -210,15 +213,17 @@ class UI {
     // paymentDOM.classList.add('show')
     overlay.classList.add('show')
     carrito = Storage.getCart()
+    console.log(carrito)
     window.dataLayer = window.dataLayer || [];
-    // let arrProd = carrito;
-    // let item_id;
-    // arrProd.forEach(carro =>{
-    //   item_id = carro.id;
-    // })
+    let arr = [];
+    for (let index = 0; index < carrito.length; index++) {
+      const element = carrito[index];
+      let token = {'item_id':element.id, 'item_name':element.title}
+      arr.push(token);
+    }
     dataLayer.push({
       'event': 'view_cart',
-      currency : 'EUR',
+      items : arr,
     })
   }
   hide () {
