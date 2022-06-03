@@ -54,13 +54,32 @@ function validate_cvv(cvv){
 let paymentBtn = document.querySelector('.payment-order-btn');
 
 paymentBtn.addEventListener('click', () => {
+  carrito = Storage.getCart()
+  let caracteres = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789";
+  let transaction_id = "";
+  for (i=0; i<20; i++) transaction_id +=caracteres.charAt(Math.floor(Math.random()*caracteres.length)); 
   window.dataLayer = window.dataLayer || [];
+  let arr = [];
+  let tempTotal = 0
+  let itemTotal = 0
+  carrito.map(item => {
+    tempTotal += item.price * item.cantidad
+    itemTotal += item.cantidad
+  })
+  for (let index = 0; index < carrito.length; index++) {
+    const element = carrito[index];
+    let token = {'item_id': element.id, 'item_name': element.title};
+    arr.push(token);
+  }
+  
   dataLayer.push({
     'event': 'purchase',
     currency: 'EUR',
-    transaction_id: '1234567',
-    value: 234,
+    transaction_id: transaction_id,
+    value : tempTotal,
+    items : arr,
+  
   });  
   location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageCart.html'
-})
-  
+})  
+

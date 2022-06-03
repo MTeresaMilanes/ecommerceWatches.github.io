@@ -184,6 +184,16 @@ class UI {
   addCarritoItem ({ image, price, title, id }) {
     const div = document.createElement('div')
     div.classList.add('carrito__item')
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'event': 'add_to_cart',
+      currency : 'EUR',
+      value : price,
+      items: [{
+        item_id : id,
+        item_name : title,
+      }]
+    })
 
     div.innerHTML = `
 		<img src=${image} alt=${title}>
@@ -261,8 +271,6 @@ class UI {
     carritoCenter.addEventListener('click', e => {
       const target = e.target.closest('span')
       const targetElement = target.classList.contains('remove__item')
-      console.log(target)
-      console.log(targetElement)
       if (!target) return
       if (targetElement) {
         const id = parseInt(target.dataset.id)
@@ -304,6 +312,17 @@ class UI {
     this.setItemValues(carrito)
     Storage.saveCart(carrito)
     let button = this.singleButton(id)
+    let price = 0
+    carrito.map(item => {
+      price = item.price
+    })
+    
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'event': 'remove_from_cart',
+      currency : 'EUR',
+      value : price,
+    })
     if (button) {
       button.disabled = false
       button.innerText = 'add cart'
@@ -432,6 +451,7 @@ applyBtn.addEventListener('click', () => {
     location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageFormContact.html'
   }
 })
+
 
 
 
