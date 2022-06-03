@@ -44,7 +44,7 @@ class UI {
     filtroDato.forEach(producto => {
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
-        'event': 'view_item',
+        'event': 'select_item',
         currency : 'EUR',
         value :producto.price,
         items: [{
