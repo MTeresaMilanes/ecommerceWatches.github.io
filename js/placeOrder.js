@@ -80,6 +80,12 @@ paymentBtn.addEventListener('click', () => {
     items : arr,
   
   });  
+  dataLayer.push({
+    'event' : 'add_payment_info',
+    currency: 'EUR',
+    value : tempTotal,
+    items: arr,
+  })
   location.href = 'https://mteresamilanes.github.io/ecommerceWatches.github.io/thankYouPageCart.html'
 })  
 
