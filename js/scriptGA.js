@@ -1,6 +1,13 @@
-var player
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
 function onYouTubeIframeAPIReady () {
   player = new YT.Player('player', {
+    height: '360',
+    width: '640',
     videoId: 'I8AyFs2uESg',
     events: {
       onStateChange: onPlayerStateChange
@@ -8,24 +15,22 @@ function onYouTubeIframeAPIReady () {
   })
 }
 
-function onPlayerStateChange (event) {
-  if (event.data == YT.PlayerState.PLAYING) {
-    window.dataLayer = window.dataLayer || []
-    dataLayer.push({
-      event: 'video_play',
-      visitorType: 'user'
-    })
-    console.log('event play detected')
-  }
-  if (event.data == YT.PlayerState.PAUSED) {
-    window.dataLayer = window.dataLayer || []
-    dataLayer.push({
-      event: 'video_pause',
-      visitorType: 'user'
-    })
-    console.log('event paused detected')
-  }
-}
+// function onPlayerStateChange (event) {
+//   if (event.data == YT.PlayerState.PLAYING) {
+//     window.dataLayer = window.dataLayer || []
+//     dataLayer.push({
+//       event: 'video_start',
+//     })
+//   }
+//   if (event.data == YT.PlayerState.PAUSED) {
+//     window.dataLayer = window.dataLayer || []
+//     dataLayer.push({
+//       event: 'video_pause',
+//       visitorType: 'user'
+//     })
+//     console.log('event paused detected')
+//   }
+// }
 
 let buttonFooter = document.querySelector('.fButton');
 buttonFooter.addEventListener('click', () => {
