@@ -19,12 +19,12 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerStateChange (event) {
-  if (event.data == YT.PlayerState.PLAYING) {
-    window.dataLayer = window.dataLayer || []
-    dataLayer.push({
-      event: 'video_start',
-    })
-  }
+  // if (event.data == YT.PlayerState.PLAYING) {
+  //   window.dataLayer = window.dataLayer || []
+  //   dataLayer.push({
+  //     event: 'video_start',
+  //   })
+  // }
   if (event.data == YT.PlayerState.PAUSED) {
     window.dataLayer = window.dataLayer || []
     dataLayer.push({
