@@ -29,7 +29,6 @@ function onPlayerStateChange (event) {
     window.dataLayer = window.dataLayer || []
     dataLayer.push({
       event: 'video_pause',
-      visitorType: 'user'
     })
     console.log('event paused detected')
   }
