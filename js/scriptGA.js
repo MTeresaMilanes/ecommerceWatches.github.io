@@ -12,28 +12,28 @@ function onYouTubeIframeAPIReady() {
     height: '360',
     width: '640',
     videoId: 'I8AyFs2uESg',
-    // events: {
-    //   onStateChange: onPlayerStateChange
-    // }
+    events: {
+      onStateChange: onPlayerStateChange
+    }
   })
 }
 
-// function onPlayerStateChange (event) {
-//   if (event.data == YT.PlayerState.PLAYING) {
-//     window.dataLayer = window.dataLayer || []
-//     dataLayer.push({
-//       event: 'video_start',
-//     })
-//   }
-//   if (event.data == YT.PlayerState.PAUSED) {
-//     window.dataLayer = window.dataLayer || []
-//     dataLayer.push({
-//       event: 'video_pause',
-//       visitorType: 'user'
-//     })
-//     console.log('event paused detected')
-//   }
-// }
+function onPlayerStateChange (event) {
+  if (event.data == YT.PlayerState.PLAYING) {
+    window.dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'video_start',
+    })
+  }
+  if (event.data == YT.PlayerState.PAUSED) {
+    window.dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'video_pause',
+      visitorType: 'user'
+    })
+    console.log('event paused detected')
+  }
+}
 
 let buttonFooter = document.querySelector('.fButton');
 buttonFooter.addEventListener('click', () => {
