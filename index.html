@@ -61,14 +61,14 @@
           </div>
         </a>
         <ul class="links-container">
-          <li class="link-item"><a href="./index.html" class="link active">home</a></li>
-          <li class="link-item"><a href="./product-list.html" class="link">products</a></li>
-          <li class="link-item"><a href="./contact.html" class="link">contact</a></li>
+          <li class="link-item"><a href="./index.html" class="link active" id="buttonHome">home</a></li>
+          <li class="link-item"><a href="./product-list.html" class="link" id="buttonProducts">products</a></li>
+          <li class="link-item"><a href="./contact.html" class="link" id="buttonContact">contact</a></li>
         </ul>
         <ul class="nav__list">
           <div class="carrito__icon">
             <span class="iconify" data-icon="carbon:user-avatar-filled-alt"></span>
-            <span class="iconify" data-icon="dashicons:cart"></span>
+            <span class="iconify" data-icon="dashicons:cart" id="buttonCart"></span>
             <span class="item__total">0</span>
           </div>
         </ul>
@@ -102,34 +102,14 @@
       </div>
     </section> -->
     <div class="image-collage">
-      <!-- <div class="card">
-        <img class="card-img-top" id="image" alt="Card image cap">
-      </div>
-      <div class="card">
-        <img class="card-img-top" alt="Card image cap">
-      </div>
-      <div class="card">
-        <img class="card-img-top" alt="Card image cap">
-      </div>
-      <div class="card">
-        <img class="card-img-top" alt="Card image cap">
-      </div>
-      <div class="card">
-        <img class="card-img-top" alt="Card image cap">
-      </div> -->
-      <!-- <div class="card">
-        <img class="card-img-top" src="./img/watch-6.webp" alt="Card image cap">
-      </div> -->
     </div>
     <!-- Video section -->
     <section class="video-section" >
       <div class="section-item-container">
-        <!-- <img src="./img/bg-3.jpg" class="section-bg" alt=""> -->
         <div class="section-info">
           <h1 class="title">get <span>inspiration</span></h1>
           <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sequi aliquam quas sapiente repellendus soluta!</p>
         </div>
-        <!-- <iframe  id="player" width="560" height="315" data-id="I8AyFs2uESg" src="https://www.youtube.com/embed/I8AyFs2uESg?enablejsapi=1&amp;widgetid=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <div id="player"></div>
       </div>
     </section>
@@ -210,22 +190,22 @@
         <div class="footerRight">
           <div class="footerRightMenu">
             <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
-            <button class="fButton" onclick=joinClick()>Join!</button>
+            <button class="fButton" onclick=joinClick() id="join">Join!</button>
             <div class="fMail">
             </div>
           </div>
           <div class="footerRightMenu">
             <h1 class="fMenuTitle">Follow Us</h1>
             <div class="fIcons">
-              <a href="https://twitter.com/"><span class="iconify" data-icon="foundation:social-twitter"></span></a>
-              <a href="https://www.instagram.com/"><span class="iconify" data-icon="typcn:social-instagram"></span></a>
-              <a href="https://www.youtube.com/"><span class="iconify" data-icon="foundation:social-youtube"></span></a>
+              <a href="https://twitter.com/"><span class="iconify" data-icon="foundation:social-twitter" id="twitter"></span></a>
+              <a href="https://www.instagram.com/"><span class="iconify" data-icon="typcn:social-instagram" id="instagram"></span></a>
+              <a href="https://www.youtube.com/"><span class="iconify" data-icon="foundation:social-youtube" id="youtube"></span></a>
             </div>
           </div>
           <div class="footerRightMenu">
             <h1 class="fMenuTitle">Contact Us</h1>
             <span class="copyright">
-                <button class="mailme" onclick=mailmeClick()>Mail me</button>
+                <button class="mailme" onclick=mailmeClick() id="mail">Mail me</button>
             </span>
           </div>
         </div>
