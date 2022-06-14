@@ -46,14 +46,12 @@ function joinClick(){
   window.dataLayer = window.dataLayer || [];
   dataLayer.push({
     'event': 'click_join_button', 
-    'click_type' : 'button_join',
   });
 }
 function mailmeClick(){
   window.dataLayer = window.dataLayer || [];
   dataLayer.push({
     'event': 'click_mailme_button', 
-    'click_type' : 'button_mailme',
   });
 }
 
