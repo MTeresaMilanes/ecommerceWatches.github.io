@@ -94,3 +94,16 @@ textarea{
 h3{
   color: #9744b8;
 }
+
+.btn-print{
+  width: 250px;
+  padding: 10px 0;
+  font-size: .9rem;
+  text-transform: capitalize;
+  background-color: #0e6c3b;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: 'cinzel'; 
+}
