@@ -35,7 +35,14 @@ let buttonDOM = []
 //     })
 //   })
 // })
-
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+  'event' : 'pageview_watch',
+  'pageCategory': 'Home Page',
+  'pageCity': 'Malaga',
+  'UserID': '266689181',
+  'visitor_type': 'user',
+})
 
 class UI {
   detalleProducto (id) {
